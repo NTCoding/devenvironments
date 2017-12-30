@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    image: hseeberger/scala-sbt 
+    command: ["sleep", "infinity"]
+    volumes:
+     - ".:/app"
+    ports:
+     - "9000:9000"
+  database:
+    image: "postgres:9.6.5"
+    ports:
+     - "8001:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
