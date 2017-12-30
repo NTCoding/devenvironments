@@ -1,0 +1,7 @@
+app:
+  image: "ruby:2.3"
+  volumes:
+    - ".:/app"
+  command: ["sleep", "infinity"] 
+  ports:
+    - "4567:4567"
